@@ -1,0 +1,1 @@
+docker run -i --rm -v ${PWD}:/puml plantuml-cli -tsvg *.uml
