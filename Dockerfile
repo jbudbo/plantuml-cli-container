@@ -3,6 +3,7 @@ FROM justmorr/graphviz
 WORKDIR /usr/local/bin/puml
 
 ADD "http://beta.plantuml.net/batikAndFop.zip" .
+ADD plantuml.jar .
 
 RUN yum install -y unzip \
     && unzip batikAndFop.zip
