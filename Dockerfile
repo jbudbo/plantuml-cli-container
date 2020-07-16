@@ -10,6 +10,8 @@ RUN yum install -y unzip \
 
 WORKDIR /puml
 
-ENTRYPOINT [ "java", "-jar", "/usr/local/bin/puml/plantuml.jar", "-DPLANTUML_LIMIT_SIZE=8192", "-progress" ]
+ENV PLANTUML_LIMIT_SIZE=8192
+
+ENTRYPOINT [ "java", "-jar", "/usr/local/bin/puml/plantuml.jar", "-progress" ]
 
 CMD [ "-tpdf", "*.puml" ]
