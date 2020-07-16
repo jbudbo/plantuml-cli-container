@@ -12,6 +12,6 @@ WORKDIR /puml
 
 ENV PLANTUML_LIMIT_SIZE=8192
 
-ENTRYPOINT [ "java", "-jar", "/usr/local/bin/puml/plantuml.jar", "-progress" ]
+ENTRYPOINT [ "java", "-Djava.awt.headless=true", "-jar", "/usr/local/bin/puml/plantuml.jar", "-progress" ]
 
 CMD [ "-tpdf", "*.puml" ]
